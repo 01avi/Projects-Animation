@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <audio
+      controls
+      autoplay
+      loop
+      src="Images/LionGrowlAngryGene PE931903.mp3"
+      type="audio/mp3"
+    ></audio>
+    <audio
+      controls
+      autoplay
+      loop
+      src="Images/nature-soundstropicaljunglebirds-108380.mp3"
+      type="audio/mp3"
+    ></audio>
+    <div class="box">
+      <div class="lion"><img src="images/Lion.gif" alt="" /></div>
+      <div class="son"><img src="images/Lion son.gif" alt="" /></div>
+      <div class="wolf"><img src="images/Wolf 2.gif" alt="" /></div>
+      <div class="fox"><img src="images/Fox.gif" alt="" /></div>
+      <div class="snake"><img src="images/Snake.gif" alt="" /></div>
+      <div class="birds"><img src="images/birds.gif" alt="" /></div>
+    </div>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      audio {
+        display: none;
+      }
+      .box {
+        height: 100vh;
+        width: 100%;
+        background-image: url(images/Forest.jpg);
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        overflow: hidden;
+      }
+      .lion {
+        display: block;
+        position: absolute;
+        bottom: 60px;
+        left: 90%;
+        right: 0px;
+        z-index: 1;
+        animation: lion 10s linear infinite;
+      }
+      .lion img {
+        width: 400px;
+      }
+      @keyframes lion {
+        0% {
+          transform: translateX(2000px);
+        }
+        100% {
+          transform: translateX(-2000px);
+        }
+      }
+      .son {
+        display: block;
+        position: absolute;
+        bottom: 40px;
+        left: 120%;
+        right: 0px;
+        z-index: 1;
+        animation: lion 10s linear infinite;
+      }
+      .son img {
+        width: 200px;
+      }
+      @keyframes lion {
+        0% {
+          transform: translateX(2000px);
+        }
+        100% {
+          transform: translateX(-2000px);
+        }
+      }
+
+      .wolf {
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        left: 70%;
+        right: 0;
+        z-index: 1;
+        animation: wolf 10s linear infinite;
+      }
+      .wolf img {
+        width: 250px;
+      }
+      @keyframes wolf {
+        0% {
+          transform: translateX(2000px);
+        }
+        100% {
+          transform: translateX(-2000px);
+        }
+      }
+      .fox {
+        display: block;
+        position: absolute;
+        bottom: 30px;
+        left: 45%;
+        right: 0;
+        z-index: 1;
+        animation: fox 10s linear infinite;
+      }
+      .fox img {
+        width: 250px;
+      }
+      @keyframes fox {
+        0% {
+          transform: translateX(2000px);
+        }
+        100% {
+          transform: translateX(-2000px);
+        }
+      }
+      .snake {
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        left: 20%;
+        margin-bottom: 1%;
+        right: 0;
+        z-index: 1;
+      }
+      .snake img {
+        width: 80px;
+      }
+
+      .birds {
+        display: block;
+        position: absolute;
+        top: 10px;
+        bottom: 0px;
+        right: 0;
+        z-index: 1;
+        animation: birds 10s linear infinite;
+      }
+      .birds img {
+        width: 250px;
+      }
+      @keyframes birds {
+        0% {
+          transform: translateX(2000px);
+        }
+        100% {
+          transform: translateX(-2000px);
+        }
+      }
+      @media screen and (max-width: 600px) {
+        .snake img {
+          width: 80px;
+        }
+        .snake {
+          display: block;
+          position: absolute;
+          bottom: 0px;
+          left: 10%;
+          margin-bottom: 10%;
+          right: 0;
+          z-index: 1;
+        }
+
+        .fox {
+          display: block;
+          position: absolute;
+          bottom: 60px;
+          left: 45%;
+          right: 0;
+          z-index: 1;
+          animation: fox 15s linear infinite;
+        }
+        .fox img {
+          width: 150px;
+        }
+        .wolf {
+          display: block;
+          position: absolute;
+          bottom: 60px;
+          left: 70%;
+          right: 0;
+          z-index: 1;
+          animation: wolf 15s linear infinite;
+        }
+        .wolf img {
+          width: 150px;
+        }
+        .son {
+          display: block;
+          position: absolute;
+          bottom: 40px;
+          left: 130%;
+          right: 0px;
+          z-index: 1;
+          animation: lion 15s linear infinite;
+        }
+        .son img {
+          width: 200px;
+        }
+        .lion {
+          display: block;
+          position: absolute;
+          bottom: 80px;
+          left: 90%;
+          right: 0px;
+          z-index: 1;
+          animation: lion 15s linear infinite;
+        }
+        .lion img {
+          width: 250px;
+        }
+      }
+    </style>
+  </body>
+</html>

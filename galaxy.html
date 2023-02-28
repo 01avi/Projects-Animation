@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <audio
+      controls
+      autoplay
+      loop
+      src="Images/spacesound-7547.mp3"
+      type="audio/mp3"
+    ></audio>
+    <div class="box">
+      <div class="a">
+        <p><img src="images/3.gif" alt="" /></p>
+      </div>
+      <div class="b">
+        <p><img src="images/2.gif" alt="" /></p>
+      </div>
+      <div class="c">
+        <p><img src="images/Planet.gif" alt="" /></p>
+      </div>
+      <div class="d">
+        <p><img src="images/4.gif" alt="" /></p>
+      </div>
+      <div class="e">
+        <img src="images/spaceship.webp" alt="" />
+      </div>
+      <div class="f">
+        <img src="images/meteor.gif" alt="" />
+      </div>
+      <div class="g">
+        <marquee behavior="alternate" direction="down" hight="100px">
+          <marquee scrollment="20" direction="right"
+            ><img src="images/Ship.gif" alt=""
+          /></marquee>
+        </marquee>
+      </div>
+    </div>
+    <style>
+      * {
+        margin: 0%;
+      }
+      audio {
+        display: none;
+      }
+      .box {
+        background-image: url(images/5492398.jpg);
+        height: 100vh;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        overflow: hidden;
+      }
+      .a {
+        padding: 3%;
+        position: absolute;
+        top: 10px;
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 1;
+      }
+      .a img {
+        width: 150px;
+      }
+      .b {
+        position: absolute;
+        top: 10px;
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 1;
+      }
+      .b img {
+        width: 250px;
+        margin-left: 80%;
+      }
+      .c {
+        position: absolute;
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 1;
+      }
+      .c img {
+        width: 150px;
+        margin-top: 10%;
+        padding-left: 30%;
+      }
+      .d {
+        position: absolute;
+        display: block;
+        margin-top: 5%;
+        padding-left: 50%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 1;
+      }
+      .d img {
+        width: 100px;
+      }
+      .e {
+        position: absolute;
+        display: block;
+        position: absolute;
+        left: 0;
+        margin-top: 20%;
+        margin-left: 50%;
+        right: 0;
+        z-index: 1;
+      }
+      .e {
+        position: absolute;
+        top: 10px;
+        animation: plane 10s linear infinite;
+        display: block;
+        position: absolute;
+        left: 60px;
+        right: 0;
+        z-index: 1;
+      }
+      @keyframes plane {
+        0% {
+          transform: translateY(2000px);
+        }
+        100% {
+          transform: translateY(-2000px);
+        }
+      }
+      .e img {
+        width: 100px;
+      }
+      .f img {
+        width: 80px;
+      }
+      .f {
+        animation: meteor 10s linear infinite;
+        position: absolute;
+        display: block;
+        position: absolute;
+        bottom: 20px;
+        right: 0;
+        z-index: 1;
+      }
+      @keyframes meteor {
+        0% {
+          transform: tra(2000px);
+        }
+        100% {
+          transform: translateX(-2000px);
+        }
+      }
+      .g {
+        display: block;
+        padding-top: 20%;
+        right: 0;
+        z-index: 1;
+      }
+      .g img {
+        width: 150px;
+      }
+      @media (max-aspect-ratio: 16/9) {
+        .box {
+          background-image: url(images/space.jpg);
+          height: 100vh;
+          width: 100%;
+          background-position: center;
+          background-size: cover;
+          position: relative;
+          overflow: hidden;
+        }
+        .a img {
+          width: 80px;
+        }
+        .b img {
+          width: 100px;
+          margin-top: 60%;
+          margin-left: 80%;
+        }
+        .c img {
+          width: 100px;
+          margin-top: 40%;
+          padding-left: 30%;
+        }
+        .d img {
+          width: 80px;
+          margin-top: 30%;
+        }
+        .e img {
+          width: 120px;
+        }
+        .e {
+          left: 50px;
+        }
+        .g {
+          display: block;
+          padding-top: 90%;
+          right: 0;
+          z-index: 1;
+        }
+        .f {
+          position: absolute;
+          display: block;
+          position: absolute;
+          bottom: 45px;
+          right: 0;
+          z-index: 1;
+        }
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aviral world</title>
+  </head>
+  <body>
+    <audio
+      controls
+      autoplay
+      loop
+      src="Png/airplane-fly-by-01a (mp3cut.net).mp3"
+      type="audio/mp3"
+    ></audio>
+    <audio
+      controls
+      autoplay
+      loop
+      src="Png/rally-car-idle-loop-17-84405.mp3"
+      type="audio/mp3"
+    ></audio>
+
+    <div class="box">
+      <p style="color: white">Aviral World</p>
+      <div class="Road"></div>
+      <div class="city"></div>
+      <div class="airoplane">
+        <img
+          src="Png/—Pngtree—airliner airplane clip art_5586384.png"
+          alt="plane"
+        />
+      </div>
+      <div class="Car">
+        <img src="Png/car.png" alt="car" />
+      </div>
+      <div class="tyres">
+        <img src="Png/wheel.png" class="back" alt="back" />
+        <img src="Png/wheel.png" class="front" alt="front" />
+      </div>
+    </div>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      audio {
+        display: none;
+      }
+      .box {
+        height: 100vh;
+        width: 100%;
+        background-image: url(Png/sky.jpg);
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .Road {
+        height: 200px;
+        width: 500%;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        background-image: url(Png/road.jpg);
+        animation: Road 5s linear infinite;
+      }
+      @keyframes Road {
+        100% {
+          transform: translateX(-3400px);
+        }
+      }
+      .city {
+        height: 250px;
+        width: 900%;
+        background-image: url(Png/city.png);
+        position: absolute;
+        bottom: 200px;
+        left: 0;
+        right: 0;
+        display: block;
+        z-index: 1;
+        background-repeat: repeat-x;
+        animation: city 20s linear infinite;
+      }
+      @keyframes city {
+        100% {
+          transform: translateX(-1400px);
+        }
+      }
+      .airoplane img {
+        width: 200px;
+        right: 50%;
+        top: 10px;
+        position: absolute;
+        animation: plane 15s linear infinite;
+      }
+
+      @keyframes plane {
+        from {
+          right: 100vw;
+        }
+        to {
+          right: -40vw;
+        }
+      }
+      .Car {
+        width: 400px;
+        left: 50%;
+        bottom: 100px;
+        transform: translateX(-50%);
+        position: absolute;
+        z-index: 2;
+      }
+      .Car img {
+        width: 100%;
+        animation: Car 1s linear infinite;
+      }
+      @keyframes Car {
+        100% {
+          transform: translateY(-1x);
+        }
+        50% {
+          transform: translateY(1x);
+        }
+        0% {
+          transform: translateY(-1x);
+        }
+      }
+      .tyres {
+        left: 50%;
+        bottom: 178px;
+        transform: translate(-50%);
+        position: absolute;
+        z-index: 2;
+      }
+      .tyres img {
+        width: 72px;
+        height: 72px;
+        animation: tyres 1s linear infinite;
+      }
+      @keyframes tyres {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .back {
+        left: -165px;
+        position: absolute;
+      }
+      .front {
+        right: -152px;
+        position: absolute;
+      }
+
+      @media screen and (max-width: 600px) {
+        .Car {
+          width: 200px;
+          left: 50%;
+        }
+        .tyres {
+          left: 50%;
+          bottom: 142px;
+        }
+        .tyres img {
+          width: 35px;
+          height: 35px;
+          animation: tyres 0.8s linear infinite;
+        }
+        .back {
+          left: -82px;
+        }
+        .front {
+          right: -76px;
+        }
+        .airoplane img {
+          width: 150px;
+          right: 50%;
+          top: 40px;
+        }
+        .Road {
+          height: 200px;
+          width: 500%;
+          animation: Road 5s linear infinite;
+        }
+        @keyframes Road {
+          100% {
+            transform: translateX(-2000px);
+          }
+        }
+      }
+    </style>
+  </body>
+</html>
