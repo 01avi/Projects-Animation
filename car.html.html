@@ -14,13 +14,6 @@
       src="Png/airplane-fly-by-01a (mp3cut.net).mp3"
       type="audio/mp3"
     ></audio>
-    <audio
-      controls
-      autoplay
-      loop
-      src="Png/rally-car-idle-loop-17-84405.mp3"
-      type="audio/mp3"
-    ></audio>
 
     <div class="box">
       <p style="color: white">Aviral World</p>
@@ -33,7 +26,7 @@
         />
       </div>
       <div class="Car">
-        <img src="Png/car.png" alt="car" />
+        <img src="Png/2cdb142c819b2e8d2227b5f76a07b5eb.png" alt="car" />
       </div>
       <div class="tyres">
         <img src="Png/wheel.png" class="back" alt="back" />
@@ -119,7 +112,7 @@
       }
       .Car img {
         width: 100%;
-        animation: Car 0.5s linear infinite;
+        animation: Car 0.6s linear infinite;
       }
       @keyframes Car {
         100% {
@@ -140,8 +133,8 @@
         z-index: 2;
       }
       .tyres img {
-        width: 72px;
-        height: 72px;
+        width: 60px;
+        height: 60px;
         animation: tyres 1s linear infinite;
       }
       @keyframes tyres {
@@ -150,11 +143,11 @@
         }
       }
       .back {
-        left: -165px;
+        left: -133px;
         position: absolute;
       }
       .front {
-        right: -152px;
+        right: -148px;
         position: absolute;
       }
 
@@ -164,34 +157,34 @@
           left: 50%;
         }
         .Car img {
-        width: 100%;
-        animation: Car 0.5s linear infinite;
-      }
-      @keyframes Car {
-        100% {
-          transform: translateX(-1px);
+          width: 100%;
+          animation: Car 0.6s linear infinite;
         }
-        50% {
-          transform: translateY(1px);
+        @keyframes Car {
+          100% {
+            transform: translateX(-1px);
+          }
+          50% {
+            transform: translateY(1px);
+          }
+          0% {
+            transform: translateX(-1px);
+          }
         }
-        0% {
-          transform: translateX(-1px);
-        }
-      }
         .tyres {
           left: 50%;
           bottom: 142px;
         }
         .tyres img {
-          width: 35px;
-          height: 35px;
+          width: 30px;
+          height: 30px;
           animation: tyres 0.8s linear infinite;
         }
         .back {
-          left: -82px;
+          left: -65px;
         }
         .front {
-          right: -76px;
+          right: -74px;
         }
         .airoplane img {
           width: 150px;
@@ -199,7 +192,7 @@
           top: 40px;
         }
         .Road {
-          height: 200px;
+          height: 180px;
           width: 500%;
           animation: Road 5s linear infinite;
         }
@@ -207,6 +200,13 @@
           100% {
             transform: translateX(-1500px);
           }
+        }
+        .city {
+          height: 250px;
+          width: 900%;
+          background-image: url(Png/city.png);
+          position: absolute;
+          bottom: 180px;
         }
       }
     </style>
