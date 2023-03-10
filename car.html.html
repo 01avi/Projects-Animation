@@ -23,6 +23,7 @@
     ></audio>
 
     <div class="box">
+      <img src="png/sky.jpg" alt="" />
       <p style="color: white">Aviral World</p>
       <div class="Road"></div>
       <div class="city"></div>
@@ -39,6 +40,7 @@
         <img src="Png/wheel.png" class="back" alt="back" />
         <img src="Png/wheel.png" class="front" alt="front" />
       </div>
+      <div class="birds"><img src="images/birds.gif" alt="" /></div>
     </div>
     <style>
       * {
@@ -51,11 +53,38 @@
       .box {
         height: 100vh;
         width: 100%;
-        background-image: url(Png/sky.jpg);
         background-position: center;
         background-size: cover;
         position: relative;
         overflow: hidden;
+      }
+      .box img {
+        animation: sky 20s linear infinite;
+      }
+      @keyframes sky {
+        100% {
+          transform: translateX(-600px);
+        }
+      }
+      .birds {
+        display: block;
+        position: absolute;
+        top: 10px;
+        bottom: 0px;
+        right: 0;
+        z-index: 1;
+        animation: birds 10s linear infinite;
+      }
+      .birds img {
+        width: 150px;
+      }
+      @keyframes birds {
+        0% {
+          transform: translateX(2000px);
+        }
+        100% {
+          transform: translateX(-2000px);
+        }
       }
 
       .Road {
@@ -215,7 +244,19 @@
           position: absolute;
           bottom: 180px;
         }
+        .birds {
+          display: block;
+          position: absolute;
+          margin-top: 40%;
+          right: 0;
+          z-index: 1;
+          animation: birds 15s linear infinite;
+        }
+        .birds img {
+          width: 150px;
+        }
       }
     </style>
   </body>
 </html>
+
