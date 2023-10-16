@@ -1,262 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aviral world</title>
-  </head>
-  <body>
-    <audio
-      controls
-      autoplay
-      loop
-      src="Png/airplane-fly-by-01a (mp3cut.net).mp3"
-      type="audio/mp3"
-    ></audio>
-    <audio
-      controls
-      autoplay
-      loop
-      src="Png/rally-car-idle-loop-17-84405.mp3"
-      type="audio/mp3"
-    ></audio>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aviral World</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    <div class="box">
-      <img src="Png/sky.jpg" alt="" />
-      <p style="color: white">Aviral World</p>
-      <div class="Road"></div>
-      <div class="city"></div>
-      <div class="airoplane">
-        <img
-          src="Png/—Pngtree—airliner airplane clip art_5586384.png"
-          alt="plane"
-        />
-      </div>
-      <div class="Car">
-        <img src="Png/Vihical.png" alt="car" />
-      </div>
-      <div class="tyres">
-        <img src="Png/wheel.png" class="back" alt="back" />
-        <img src="Png/wheel.png" class="front" alt="front" />
-      </div>
-      <div class="birds"><img src="images/birds.gif" alt="" /></div>
-    </div>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    audio {
+      display: none;
+    }
+
+    .container {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .sky {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("Png/sky.jpg") repeat-x;
+      animation: sky 20s linear infinite;
+    }
+
+    @keyframes sky {
+      to {
+        background-position: -1000px 0;
       }
-      audio {
-        display: none;
+    }
+
+    .birds {
+      position: absolute;
+      top: 10px;
+      right: 0;
+      animation: birds 10s linear infinite;
+    }
+
+    .birds img {
+      width: 100px;
+    }
+
+    @keyframes birds {
+      0% {
+        transform: translateX(2000px);
       }
-      .box {
-        height: 100vh;
-        width: 100%;
-        background-position: center;
-        background-size: cover;
-        position: relative;
-        overflow: hidden;
+      100% {
+        transform: translateX(-2000px);
       }
-      .box img {
-        animation: sky 20s linear infinite;
+    }
+
+    .road {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 500%;
+      height: 200px;
+      background: url("Png/road.jpg") repeat-x;
+      animation: road 5s linear infinite;
+    }
+
+    @keyframes road {
+      to {
+        transform: translateX(-3400px);
       }
-      @keyframes sky {
+    }
+
+    .city {
+      position: absolute;
+      bottom: 200px;
+      left: 0;
+      right: 0;
+      width: 900%;
+      height: 250px;
+      background: url("Png/city.png") repeat-x;
+      animation: city 20s linear infinite;
+    }
+
+    @keyframes city {
+      to {
+        transform: translateX(-1400px);
+      }
+    }
+
+    .airplane {
+      position: absolute;
+      top: 10px;
+      right: -200px;
+      animation: plane 15s linear infinite;
+    }
+
+    .airplane img {
+      width: 150px;
+    }
+
+    @keyframes plane {
+      from {
+        right: 100vw;
+      }
+      to {
+        right: -40vw;
+      }
+    }
+
+    .car {
+      position: absolute;
+      bottom: 100px;
+      left: 35%;
+      transform: translateX(-50%);
+      width: 400px;
+      animation: car 0.6s linear infinite;
+    }
+
+    .car img {
+      width: 100%;
+    }
+
+    @keyframes car {
+      0% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateY(2px);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    .tyres {
+      position: absolute;
+      bottom: 158px;
+      left: 50%;
+      transform: translateX(-50%);
+      transform: rotate(360);
+    }
+     @keyframes tyres {
         100% {
-          transform: translateX(-600px);
-        }
-      }
-      .birds {
-        display: block;
-        position: absolute;
-        top: 10px;
-        bottom: 0px;
-        right: 0;
-        z-index: 1;
-        animation: birds 10s linear infinite;
-      }
-      .birds img {
-        width: 150px;
-      }
-      @keyframes birds {
-        0% {
-          transform: translateX(2000px);
-        }
-        100% {
-          transform: translateX(-2000px);
+          transform: rotate(360deg);
         }
       }
 
-      .Road {
-        height: 200px;
-        width: 500%;
-        display: block;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 1;
-        background-image: url(Png/road.jpg);
-        animation: Road 5s linear infinite;
-      }
-      @keyframes Road {
-        100% {
-          transform: translateX(-3400px);
-        }
-      }
+    .tyres img {
+      width: 40px;
+      height: 40px;
+      animation: tyres 1s linear infinite;
+    }
+
+    .back {
+      left: -110px;
+      position: absolute;
+    }
+
+    .front {
+      right: -103px;
+      position: absolute;
+    }
+
+    @media screen and (max-width: 1200px) {
       .city {
-        height: 250px;
-        width: 900%;
-        background-image: url(Png/city.png);
-        position: absolute;
-        bottom: 200px;
-        left: 0;
-        right: 0;
-        display: block;
-        z-index: 1;
-        background-repeat: repeat-x;
-        animation: city 20s linear infinite;
-      }
-      @keyframes city {
-        100% {
-          transform: translateX(-1400px);
-        }
-      }
-      .airoplane img {
-        width: 200px;
-        right: 50%;
-        top: 10px;
-        position: absolute;
-        animation: plane 15s linear infinite;
+        background-size: 2000px 250px;
       }
 
-      @keyframes plane {
-        from {
-          right: 100vw;
-        }
-        to {
-          right: -40vw;
-        }
+      .car {
+        width: 300px;
       }
-      .Car {
-        width: 400px;
-        left: 50%;
-        bottom: 100px;
-        transform: translateX(-50%);
-        position: absolute;
-        z-index: 2;
+
+      .tyres img {
+        width: 45px;
+        height: 45px;
       }
-      .Car img {
-        width: 100%;
-        animation: Car 0.6s linear infinite;
+    }
+
+    @media screen and (max-width: 768px) {
+      .car {
+        width: 180px;
+        left: 20%;
       }
-      @keyframes Car {
-        100% {
-          transform: translateX(-1px);
+
+      .car img {
+        animation: car-mobile 3s linear infinite;
+      }
+
+      @keyframes car-mobile {
+        0% {
+          transform: translateX(0);
         }
         50% {
           transform: translateY(1px);
         }
-        0% {
-          transform: translateX(-1px);
+        100% {
+          transform: translateX(0);
         }
       }
+
       .tyres {
-        left: 50%;
-        bottom: 178px;
-        transform: translate(-50%);
-        position: absolute;
-        z-index: 2;
-      }
-      .tyres img {
-        width: 60px;
-        height: 60px;
-        animation: tyres 1s linear infinite;
+        bottom: 135px;
+        transform: rotate(360);
       }
       @keyframes tyres {
         100% {
           transform: rotate(360deg);
         }
       }
+
+      .tyres img {
+        width: 27px;
+        height: 27px;
+        animation: tyres-mobile 0.8s linear infinite;
+        animation: tyres 1s linear infinite;
+      }
+
       .back {
-        left: -133px;
-        position: absolute;
+        left: -70px;
       }
+
       .front {
-        right: -148px;
-        position: absolute;
+        right: -57px;
       }
 
-      @media screen and (max-width: 600px) {
-        .Car {
-          width: 200px;
-          left: 50%;
-        }
-        .Car img {
-          width: 100%;
-          animation: Car 0.6s linear infinite;
-        }
-        @keyframes Car {
-          100% {
-            transform: translateX(-1px);
-          }
-          50% {
-            transform: translateY(1px);
-          }
-          0% {
-            transform: translateX(-1px);
-          }
-        }
-        .tyres {
-          left: 50%;
-          bottom: 142px;
-        }
-        .tyres img {
-          width: 30px;
-          height: 30px;
-          animation: tyres 0.8s linear infinite;
-        }
-        .back {
-          left: -65px;
-        }
-        .front {
-          right: -74px;
-        }
-        .airoplane img {
-          width: 150px;
-          right: 50%;
-          top: 40px;
-        }
-        .Road {
-          height: 180px;
-          width: 500%;
-          animation: Road 5s linear infinite;
-        }
-        @keyframes Road {
-          100% {
-            transform: translateX(-1500px);
-          }
-        }
-        .city {
-          height: 250px;
-          width: 900%;
-          background-image: url(Png/city.png);
-          position: absolute;
-          bottom: 180px;
-        }
-        .birds {
-          display: block;
-          position: absolute;
-          margin-top: 40%;
-          right: 0;
-          z-index: 1;
-          animation: birds 15s linear infinite;
-        }
-        .birds img {
-          width: 150px;
+      .airplane img {
+        width: 100px;
+        top: 40px;
+      }
+
+      .road {
+        height: 200px;
+        width: 600%;
+        animation: road-mobile 5s linear infinite;
+      }
+
+      @keyframes road-mobile {
+        to {
+          transform: translateX(-1500px);
         }
       }
-    </style>
-  </body>
+
+      .city {
+        height: 240px;
+        background-size: 800px 250px;
+      }
+
+      .birds {
+        margin-top: 5%;
+        animation: birds-mobile 15s linear infinite;
+      }
+      .birds img{
+       height: 30px;
+       width: 60px;
+      }
+
+      @keyframes birds-mobile {
+        to {
+          transform: translateX(-2000px);
+        }
+      }
+    }
+  </style>
+</head>
+<body>
+  <audio controls autoplay loop>
+    <source src="Png/airplane-fly-by-01a (mp3cut.net).mp3" type="audio/mp3">
+  </audio>
+  <audio controls autoplay loop>
+    <source src="Png/rally-car-idle-loop-17-84405.mp3" type="audio/mp3">
+  </audio>
+
+  <div class="container">
+    <div class="sky"></div>
+    <div class="birds"><img src="images/birds.gif" alt=""></div>
+    <div class="road"></div>
+    <div class="city"></div>
+    <div class="airplane"><img src="Png/—Pngtree—airliner airplane clip art_5586384.png" alt="plane"></div>
+    <div class="car"><img src="Png/Vihical.png" alt="car"></div>
+    <div class="tyres">
+      <img src="Png/wheel.png" class="back" alt="back">
+      <img src="Png/wheel.png" class="front" alt="front">
+    </div>
+  </div>
+</body>
 </html>
-

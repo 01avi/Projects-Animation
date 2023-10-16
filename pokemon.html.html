@@ -1,241 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-  </head>
-  <body>
-    <audio
-      controls
-      autoplay
-      loop
-      src="pic/squirtle.mp3"
-      type="audio/mp3"
-    ></audio>
-    <audio
-      controls
-      autoplay
-      loop
-      src="pic/Pikachu message - Tone.mp3"
-      type="audio/mp3"
-    ></audio>
-    <div class="box">
-      <p style="text-align: center; color: red; font-family: cursive">
-       &#169 Aviral World
-      </p>
-
-     
-      <audio controls autoplay loop src="pic/pkmn_intro_redblue.mp3"></audio>
-      <div class="p1">
-        <p>
-          <img src="pic/Char.gif" alt="" />
-        </p>
-      </div>
-      <div class="p2">
-        <p><img src="pic/4m3s.gif" alt="" /></p>
-      </div>
-      <div class="p3">
-        <p><img src="pic/DD0.gif" alt="" /></p>
-      </div>
-      <div class="p4">
-        <p><img src="pic/dd2fz6j-0ff174f6-6497-4e72-8321-9ed0f58d43be.gif" alt="" /></p>
-      </div>
-      <div class="p5">
-        <p><img src="pic/pikachu.gif" alt=""  /></p>
-      </div>
-      <div class="p6">
-        <p><img src=" pic/YdBN.gif" alt=""></p>
-      </div>
-    </div>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      audio {
-        display: none;
-      }
-      .box {
-        height: 100vh;
-        width: 100%;
-        background-image: url(pic/45338.jpg);
-        background-position: center;
-        background-size: cover;
-        position: relative;
-        overflow: hidden;
-      }
-      .p1 {
-        position: absolute;
-        top: 10px;
-        animation: dragon 10s linear infinite;
-        display: block;
-        position: absolute;
-        left: 0;
-        right: 0;
-        z-index: 1;
-      }
-      @keyframes dragon {
-        0% {
-          transform: translateX(-2000px);
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        100% {
-          transform: translateX(2000px);
-        }
-      }
-      
-      
-      .p1 img {
-        width: 250px;
-        animation: shake 0.6s linear infinite;
-      }
-      @keyframes shake {
-        100% {
-          transform: translateX(-1px);
-        }
-        50% {
-          transform: translateY(10px);
-        }
-        0% {
-          transform: translateX(-1px);
-        }
-      }
-      .p2 {
-        position: absolute;
-        bottom: 50px;
-        left: 180px;
-        text-align: center;
-      }
-      .p2 img {
-        width: 250px;
-      }
-      .p3 {
-        position: absolute;
-        bottom: 60px;
-        padding-left: 45%;
-      }
-      .p3 img {
-        width: 150px;
-      }
-      .p4 {
-        position: absolute;
-        bottom: 60px;
-        left: 550px;
-        padding-left: 30%;
-      }
-      .p4 img {
-        width: 300px;
-      }
-      .p5 img {
-        width: 180px;
-      }
-      .p5 {
-        position: absolute;
-        bottom: 2%;
-        animation: goku 10s linear infinite;
-        display: block;
-        position: absolute;
-        left: 0;
-        right: 0;
-        z-index: 1;
-      }
-      @keyframes goku {
-         0%{
-             transform: translateX(-1500px);
-          }
-        100% {
-          transform: translateX(1500px);
-        }
-      }
-      .p6 img{
-      
-        width: 200px;
-      }
-       .p6 {
-        position: absolute;
-        padding-top: 15%;
-        left: 450px;
-      
-      }
-      @media screen and (max-width: 600px) {
-      .p1 img {
-        width: 250px;
-        animation: shake 0.6s linear infinite;
-      }
-      @keyframes shake {
-        100% {
-          transform: translateX(-1px);
-        }
-        50% {
-          transform: translateY(10px);
-        }
-        0% {
-          transform: translateX(-1px);
-        }
-      }
-        .p1{
-           animation: dragon 19s linear infinite;
-        }
-        @keyframes dragon {
-          0%{
-             transform: translateX(-1500px);
-          }
-        100% {
-          transform: translateX(1500px);
-        }
-      }
-        .p2 img {
-          width: 180px;
-        }
-        .p2 {
-          position: absolute;
-          bottom: 90px;
-          left: 0px;
-        }
-        .p3 img {
-          width: 120px;
-        }
-        .p3 {
-          bottom: 90px;
-          right: 0px;
-        }
-        .p4 img {
-          width: 200px;
-        }
-        .p4 {
-          bottom: 90px;
-          left: 0px;
-        }
-        .p5{
-             animation: goku 8s linear infinite;
-        }
-        .p5 img {
-          width: 130px;
-        }
-        .p5 {
-          position: absolute;
 
-           bottom:  5%;
+        body {
+            font-family: Arial, sans-serif;
         }
+
+        audio {
+            display: none;
+        }
+
+        .box {
+            height: 100vh;
+            width: 100%;
+            background-image: url("pic/45338.jpg");
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .box p {
+            text-align: center;
+            color: red;
+            font-family: cursive;
+        }
+
+        .box audio {
+            display: none;
+        }
+
+        .p1 {
+            position: absolute;
+            top: 10px;
+            animation: dragon 10s linear infinite;
+        }
+
+        @keyframes dragon {
+            0% {
+                transform: translateX(-2000px);
+                }
+            100% {
+                transform: translateX(1000px);
+            }
+        
+      }
+
+        .p1 img {
+            width: 250px;
+            animation: shake 0.6s linear infinite;
+        }
+
+        @keyframes shake {
+            100% {
+                transform: translateX(-1px);
+            }
+            50% {
+                transform: translateY(10px);
+            }
+            0% {
+                transform: translateX(-1px);
+            }
+        }
+
+        .p2 {
+            position: absolute;
+            bottom: 50px;
+            left: 180px;
+            text-align: center;
+        }
+
+        .p2 img {
+            width: 250px;
+        }
+
+        .p3 {
+            position: absolute;
+            bottom: 60px;
+            left: 45%;
+        }
+
+        .p3 img {
+            width: 150px;
+        }
+
+        .p4 {
+            position: absolute;
+            bottom: 60px;
+            right: 30%;
+        }
+
+        .p4 img {
+            width: 300px;
+        }
+
+        .p5 {
+            position: absolute;
+            bottom: 2%;
+            animation: goku 10s linear infinite;
+        }
+
         @keyframes goku {
-        0%{
-          transform: translateX(-1000px) ;
+            0% {
+                transform: translateX(-1500px);
+            }
+            100% {
+                transform: translateX(1500px);
+            }
         }
-          100% {
-            transform: translateX(1000px);
-          }
+
+        .p5 img {
+            width: 180px;
         }
-        .p6 img{
-      
-        width: 180px;
-      }
-       .p6 {
-        position: absolute;
-        padding-top: 40%;
-      
-      }
-      }
+
+        .p6 img {
+            width: 200px;
+        }
+
+        .p6 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @media screen and (max-width: 600px) {
+            .p1 img {
+                width: 250px;
+                animation: shake 0.6s linear infinite;
+            }
+
+            .p1 {
+                animation: dragon 19s linear infinite;
+            }
+
+            .p2 img {
+                width: 180px;
+            }
+
+            .p2 {
+                position: absolute;
+                bottom: 90px;
+                left: 10px;
+            }
+
+            .p3 img {
+                width: 120px;
+            }
+
+            .p3 {
+                bottom: 90px;
+                right: 10px;
+            }
+
+            .p4 img {
+                width: 300px;
+            }
+
+            .p4 {
+                bottom: 90px;
+                left: 0;
+            }
+
+            .p5 {
+                animation: goku 8s linear infinite;
+            }
+
+            .p5 img {
+                width: 130px;
+            }
+
+            .p5 {
+                position: absolute;
+                bottom: 5%;
+            }
+
+            .p6 img {
+                width: 140px;
+            }
+
+            .p6 {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
     </style>
-  </body>
+</head>
+<body>
+<audio controls autoplay loop>
+    <source src="pic/squirtle.mp3" type="audio/mp3">
+</audio>
+<audio controls autoplay loop>
+    <source src="pic/Pikachu message - Tone.mp3" type="audio/mp3">
+</audio>
+<div class="box">
+    <p>&#169 Aviral World</p>
+    <audio controls autoplay loop src="pic/pkmn_intro_redblue.mp3"></audio>
+    <div class="p1">
+        <p><img src="pic/Char.gif" alt="" /></p>
+    </div>
+    <div class="p2">
+        <p><img src="pic/4m3s.gif" alt="" /></p>
+    </div>
+    <div class="p3">
+        <p><img src="pic/DD0.gif" alt="" /></p>
+    </div>
+    <!-- <div class="p4">
+        <p><img src="pic/dd2fz6j-0ff174f6-6497-4e72-8321-9ed0f58d43be.gif" alt="" /></p>
+    </div> -->
+    <div class="p5">
+        <p><img src="pic/pikachu.gif" alt=""/></p>
+    </div>
+    <div class="p6">
+        <p><img src="pic/YdBN.gif" alt=""></p>
+    </div>
+</div>
+</body>
 </html>

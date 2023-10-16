@@ -1,222 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-  </head>
-  <body>
-    <audio
-      controls
-      autoplay
-      loop
-      src="image/spacesound-7547.mp3"
-      type="audio/mp3"
-    ></audio>
-    <div class="box">
-      <div class="a">
-        <p><img src="image/3.gif" alt="" /></p>
-      </div>
-      <div class="b">
-        <p><img src="image/2.gif" alt="" /></p>
-      </div>
-      <div class="c">
-        <p><img src="image/Planet.gif" alt="" /></p>
-      </div>
-      <div class="d">
-        <p><img src="image/4.gif" alt="" /></p>
-      </div>
-      <div class="e">
-        <img src="image/spaceship.webp" alt="" />
-      </div>
-      <div class="f">
-        <img src="image/meteor.gif" alt="" />
-      </div>
-      <div class="g">
-        <marquee behavior="alternate" direction="down" hight="100px">
-          <marquee scrollment="20" direction="right"
-            ><img src="image/Ship.gif" alt=""
-          /></marquee>
-        </marquee>
-      </div>
-    </div>
     <style>
-      * {
-        margin: 0%;
-      }
-      audio {
-        display: none;
-      }
-      .box {
-        background-image: url(image/5492398.jpg);
-        height: 100vh;
-        width: 100%;
-        background-position: center;
-        background-size: cover;
-        position: relative;
-        overflow: hidden;
-      }
-      .a {
-        padding: 3%;
-        position: absolute;
-        top: 10px;
-        display: block;
-        position: absolute;
-        left: 0;
-        right: 0;
-        z-index: 1;
-      }
-      .a img {
-        width: 150px;
-      }
-      .b {
-        position: absolute;
-        top: 10px;
-        display: block;
-        position: absolute;
-        left: 0;
-        right: 0;
-        z-index: 1;
-      }
-      .b img {
-        width: 250px;
-        margin-left: 80%;
-      }
-      .c {
-        position: absolute;
-        display: block;
-        position: absolute;
-        left: 0;
-        right: 0;
-        z-index: 1;
-      }
-      .c img {
-        width: 150px;
-        margin-top: 10%;
-        padding-left: 30%;
-      }
-      .d {
-        position: absolute;
-        display: block;
-        margin-top: 5%;
-        padding-left: 50%;
-        position: absolute;
-        left: 0;
-        right: 0;
-        z-index: 1;
-      }
-      .d img {
-        width: 100px;
-      }
-      .e {
-        position: absolute;
-        display: block;
-        position: absolute;
-        left: 0;
-        margin-top: 20%;
-        margin-left: 50%;
-        right: 0;
-        z-index: 1;
-      }
-      .e {
-        position: absolute;
-        top: 10px;
-        animation: plane 10s linear infinite;
-        display: block;
-        position: absolute;
-        left: 60px;
-        right: 0;
-        z-index: 1;
-      }
-      @keyframes plane {
-        0% {
-          transform: translateY(2000px);
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        100% {
-          transform: translateY(-2000px);
+
+        body {
+            font-family: Arial, sans-serif;
         }
-      }
-      .e img {
-        width: 100px;
-      }
-      .f img {
-        width: 80px;
-      }
-      .f {
-        animation: meteor 10s linear infinite;
-        position: absolute;
-        display: block;
-        position: absolute;
-        bottom: 20px;
-        right: 0;
-        z-index: 1;
-      }
-      @keyframes meteor {
-        0% {
-          transform: tra(2000px);
+
+        audio {
+            display: none;
         }
-        100% {
-          transform: translateX(-2000px);
-        }
-      }
-      .g {
-        display: block;
-        padding-top: 20%;
-        right: 0;
-        z-index: 1;
-      }
-      .g img {
-        width: 150px;
-      }
-      @media (max-aspect-ratio: 16/9) {
+
         .box {
-          background-image: url(image/space.jpg);
-          height: 100vh;
-          width: 100%;
-          background-position: center;
-          background-size: cover;
-          position: relative;
-          overflow: hidden;
+            background-image: url("image/5492398.jpg");
+            height: 100vh;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
         }
-        .a img {
-          width: 80px;
+
+        .box img {
+            width: 150px;
+            position: absolute;
+            z-index: 1;
         }
-        .b img {
-          width: 100px;
-          margin-top: 60%;
-          margin-left: 80%;
+
+        .a {
+            top: 10px;
+            left: 10px;
         }
-        .c img {
-          width: 100px;
-          margin-top: 40%;
-          padding-left: 30%;
+
+        .b {
+            top: 10px;
+            right: 10px;
         }
-        .d img {
-          width: 80px;
-          margin-top: 30%;
+
+        .c {
+            bottom: 10px;
+            left: 10px;
         }
+
+        .d {
+            bottom: 10px;
+            right: 10px;
+        }
+
         .e img {
-          width: 120px;
+            width: 100px;
+            top: 10px;
+            left: 10px;
+            animation: plane 10s linear infinite;
         }
-        .e {
-          left: 50px;
+
+        @keyframes plane {
+            0% {
+                transform: translateY(2000px);
+            }
+            100% {
+                transform: translateY(-2000px);
+            }
         }
+
+        .f img {
+            width: 80px;
+            bottom: 10px;
+            right: 10px;
+            animation: meteor 10s linear infinite;
+        }
+
+        @keyframes meteor {
+            0% {
+                transform: translateX(2000px);
+            }
+            100% {
+                transform: translateX(-2000px);
+            }
+        }
+
         .g {
-          display: block;
-          padding-top: 90%;
-          right: 0;
-          z-index: 1;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1;
         }
-        .f {
-          position: absolute;
-          display: block;
-          position: absolute;
-          bottom: 45px;
-          right: 0;
-          z-index: 1;
+
+        .g img {
+            width: 150px;
         }
-      }
+
+        @media (max-aspect-ratio: 16/9) {
+            .box {
+                background-image: url("image/space.jpg");
+            }
+
+            .a img, .c img, .d img {
+                width: 80px;
+            }
+
+            .b img {
+                width: 100px;
+                margin-top: 60%;
+                margin-left: 80%;
+            }
+
+            .e img {
+                width: 120px;
+                left: 50px;
+            }
+
+            .f img {
+                width: 100px;
+                bottom: 45px;
+            }
+
+            .g {
+                top: 10px;
+                right: 10px;
+            }
+        }
     </style>
-  </body>
+</head>
+<body>
+<audio controls autoplay loop>
+    <source src="image/spacesound-7547.mp3" type="audio/mp3">
+</audio>
+<div class="box">
+    <img class="a" src="image/3.gif" alt=""/>
+    <img class="b" src="image/2.gif" alt=""/>
+    <img class="c" src="image/Planet.gif" alt=""/>
+    <img class="d" src="image/4.gif" alt=""/>
+    <div class="e">
+        <img src="image/spaceship.webp" alt=""/>
+    </div>
+    <div class="f">
+        <img src="image/meteor.gif" alt=""/>
+    </div>
+    <div class="g">
+        <marquee behavior="alternate" direction="down" hight="100px">
+            <marquee scrollamount="20" direction="right">
+                <img src="image/Ship.gif" alt=""/>
+            </marquee>
+        </marquee>
+    </div>
+</div>
+</body>
 </html>
